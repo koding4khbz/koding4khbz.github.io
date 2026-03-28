@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Politique de Confidentialité — Quiz Culture Générale - Jeu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0d0f1a;
+      --card: #1a1f35;
+      --gold: #f5c842;
+      --teal: #3dd6c8;
+      --text: #e8eaf0;
+      --muted: #8a90a8;
+      --border: rgba(245,200,66,0.15);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 72% 8%,  rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 55%, rgba(255,255,255,0.25) 0%, transparent 100%),
+        radial-gradient(1px 1px at 88% 35%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 5%  80%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 60% 90%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(2px 2px at 80% 60%, rgba(245,200,66,0.15) 0%, transparent 100%),
+        radial-gradient(2px 2px at 20% 45%, rgba(61,214,200,0.1) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 80px 24px 60px;
+      background: linear-gradient(180deg, rgba(245,200,66,0.06) 0%, transparent 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,200,66,0.1);
+      border: 1px solid rgba(245,200,66,0.3);
+      border-radius: 99px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--gold), var(--teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 24px 120px;
+      position: relative;
+      z-index: 1;
+    }
+    .date-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(61,214,200,0.08);
+      border: 1px solid rgba(61,214,200,0.2);
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 12px;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 48px;
+      letter-spacing: 0.04em;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .section-lead {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .card:hover { border-color: rgba(245,200,66,0.3); }
+    .card:hover::before { opacity: 1; }
+    .card-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+    .card p:last-child { margin-bottom: 0; }
+    .card h3 {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin: 24px 0 10px;
+    }
+    ul.styled { list-style: none; padding: 0; margin: 0 0 14px; }
+    ul.styled li {
+      color: var(--muted);
+      font-size: 15px;
+      padding: 7px 0 7px 22px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      line-height: 1.6;
+    }
+    ul.styled li:last-child { border-bottom: none; }
+    ul.styled li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+    .highlight {
+      background: rgba(245,200,66,0.06);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .feature-pills { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .pill-heart { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #f87171; }
+    .pill-token { background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.3); color: var(--gold); }
+    .contact-card {
+      background: linear-gradient(135deg, rgba(245,200,66,0.08), rgba(61,214,200,0.06));
+      border: 1px solid rgba(245,200,66,0.2);
+      border-radius: var(--radius);
+      padding: 36px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .contact-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .contact-card p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .contact-link {
+      display: inline-block;
+      background: var(--gold);
+      color: #0d0f1a;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 13px 32px;
+      border-radius: 99px;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .contact-link:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,200,66,0.3); }
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer strong { color: var(--gold); }
+    @media (max-width: 600px) {
+      .card { padding: 24px 20px; }
+      .hero { padding: 56px 20px 44px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">🔒 Politique de Confidentialité</div>
+  <h1>Quiz Culture Générale<br><em>- Jeu</em></h1>
+  <p class="hero-sub">Comment nous protégeons votre vie privée et gérons vos données.</p>
+</div>
+
+<div class="wrapper">
+  <div class="date-chip">📅 Dernière mise à jour : <span id="date-pp"></span></div>
+  <h1 class="section-title">Politique de Confidentialité</h1>
+  <p class="section-lead">Nous respectons votre vie privée. Ce document explique quelles informations sont collectées lorsque vous utilisez notre application, comment elles sont utilisées et vos droits.</p>
+
+  <div class="card">
+    <div class="card-num">Article 01</div>
+    <h2>Introduction</h2>
+    <p>Bienvenue dans <strong style="color:#fff">Quiz Culture Générale - Jeu</strong> (« nous », « notre » ou « nos »). En téléchargeant et en utilisant notre application, vous acceptez les pratiques décrites dans la présente Politique de Confidentialité.</p>
+    <p>Notre application est conçue dans le respect de votre vie privée : nous ne vous demandons ni nom, ni adresse e-mail, ni aucune information personnelle pour jouer.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-num">Article 02</div>
+    <h2>Informations Collectées</h2>
+    <h3>Ce que collectent nos prestataires tiers</h3>
+    <ul class="styled">
+      <li><strong>Apple App Store</strong> — traite vos paiements et collecte les informations liées à votre compte Apple ID lors d'achats intégrés. Nous ne recevons jamais vos informations bancaires ou de carte de paiement.</li>
+      <li><strong>RevenueCat</strong> — gère vos achats intégrés (jetons, cœurs), conserve l'historique d'achat et restaure vos achats sur de nouveaux appareils. Des identifiants d'appareils anonymes peuvent être utilisés à cet effet.</li>
+      <li><strong>Données d'utilisation anonymes</strong> — des statistiques générales et non personnelles (durée de session, score) peuvent être collectées pour améliorer l'expérience de jeu.</li>
+    </ul>
+    <h3>Ce que nous ne collectons PAS</h3>
+    <ul class="styled">
+      <li>Nom, adresse e-mail ou numéro de téléphone.</li>
+      <li>Contacts, appareil photo, microphone ou localisation.</li>
+      <li>Toute information personnelle sensible.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-num">Article 03</div>
+    <h2>Utilisation des Informations</h2>
+    <p>Les informations collectées par nos prestataires servent uniquement à :</p>
+    <ul class="styled">
+      <li>Traiter et vérifier vos achats intégrés (jetons et cœurs).</li>
+      <li>Restaurer vos achats en cas de réinstallation ou de changement d'appareil.</li>
+      <li>Améliorer les performances de l'application et corriger les bugs.</li>
+      <li>Respecter nos obligations légales.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-num">Article 04</div>
+    <h2>Achats Intégrés &amp; Monnaie Virtuelle</h2>
+    <p>Notre application propose des achats intégrés pour les éléments virtuels suivants :</p>
+    <div class="feature-pills">
+      <span class="pill pill-heart">❤️ Cœurs</span>
+      <span class="pill pill-token">🪙 Jetons</span>
+    </div>
+    <ul class="styled">
+      <li><strong>Cœurs :</strong> Se régénèrent automatiquement (1 cœur toutes les 5 minutes, maximum 5). Des packs de cœurs supplémentaires peuvent être achetés.</li>
+      <li><strong>Jetons :</strong> Utilisés pour activer les aides de jeu — voir la réponse correcte (2 jetons) et supprimer 2 mauvaises réponses (2 jetons). Des packs de jetons sont disponibles à l'achat.</li>
+    </ul>
+    <div class="highlight">
+      Tous les paiements sont traités par Apple via l'App Store et gérés par RevenueCat. Les éléments virtuels n'ont aucune valeur monétaire réelle et ne peuvent pas être échangés contre des espèces.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-num">Article 05</div>
+    <h2>Services Tiers</h2>
+    <p>Nous utilisons les services tiers suivants qui sont soumis à leurs propres politiques de confidentialité :</p>
+    <ul class="styled">
+      <li><strong>Apple Inc.</strong> — gestion des paiements et de l'App Store. <a href="https://www.apple.com/legal/privacy/" style="color:var(--teal)">Politique de confidentialité Apple →</a></li>
+      <li><strong>RevenueCat</strong> — gestion des achats intégrés. <a href="https://www.revenuecat.com/privacy" style="color:var(--teal)">Politique de confidentialité RevenueCat →</a></li>
+    </ul>
+    <p>Nous vous encourageons à consulter ces politiques, car nous ne sommes pas responsables des pratiques de ces tiers.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-num">Article 06</div>
+    <h2>Conservation des Données</h2>
+    <p>Les historiques d'achat conservés par RevenueCat le sont aussi longtemps que nécessaire pour la restauration des achats et le respect de nos obligations légales. Pour toute demande de suppression, contactez-nous à l'adresse indiquée ci-dessous.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-num">Article 07</div>
+    <h2>Protection des Mineurs</h2>
+    <p>Notre application n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles auprès de mineurs. Si vous pensez qu'un enfant nous a fourni des données, veuillez nous contacter immédiatement afin que nous puissions les supprimer.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-num">Article 08</div>
+    <h2>Vos Droits</h2>
+    <p>Selon votre pays de résidence, vous pouvez avoir le droit de :</p>
+    <ul class="styled">
+      <li>Accéder aux informations personnelles que nous détenons à votre sujet.</li>
+      <li>Demander la suppression de vos données personnelles.</li>
+      <li>Vous opposer au traitement ou en demander la limitation.</li>
+    </ul>
+    <p>Pour exercer ces droits, contactez-nous à : <strong style="color:#fff">[votre-email@exemple.com]</strong></p>
+  </div>
+
+  <div class="card">
+    <div class="card-num">Article 09</div>
+    <h2>Modifications de cette Politique</h2>
+    <p>Nous pouvons mettre à jour cette Politique de Confidentialité à tout moment. Toute modification sera signalée par la mise à jour de la date « Dernière mise à jour » en haut de cette page. Nous vous encourageons à consulter ce document régulièrement.</p>
+  </div>
+
+  <div class="contact-card">
+    <h2>Une question ?</h2>
+    <p>Pour toute question relative à cette Politique de Confidentialité, n'hésitez pas à nous contacter.</p>
+    <a href="mailto:[votre-email@exemple.com]" class="contact-link">✉️ Nous Contacter</a>
+  </div>
+</div>
+
+<footer>
+  <strong>Quiz Culture Générale - Jeu</strong> · Politique de Confidentialité<br>
+  <span id="footer-year"></span>
+</footer>
+
+<script>
+  const d = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+  document.getElementById('date-pp').textContent = d;
+  document.getElementById('footer-year').textContent = '© ' + new Date().getFullYear() + ' Tous droits réservés.';
+</script>
+</body>
+</html>
