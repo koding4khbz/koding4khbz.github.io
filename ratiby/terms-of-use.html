@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Terms of Use and End-User License Agreement for Ratiby, the local-first salary planning app.">
+  <title>Terms of Use | Ratiby</title>
+  <style>
+    :root {
+      --page: #f4f7f4;
+      --surface: #ffffff;
+      --surface-soft: #edf6f0;
+      --text: #15231b;
+      --muted: #506058;
+      --brand: #006c35;
+      --brand-strong: #00522a;
+      --brand-ink: #ffffff;
+      --border: #d8e3db;
+      --focus: #e0a800;
+      --shadow: 0 18px 50px rgba(20, 51, 34, 0.08);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --content: 760px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #0e1712;
+        --surface: #142119;
+        --surface-soft: #192d21;
+        --text: #eef8f1;
+        --muted: #b7c8bc;
+        --brand: #60d394;
+        --brand-strong: #8ae4ad;
+        --brand-ink: #082012;
+        --border: #2d4435;
+        --focus: #ffd166;
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+      }
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      background:
+        radial-gradient(circle at 10% 0%, color-mix(in srgb, var(--brand) 9%, transparent), transparent 32rem),
+        var(--page);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--brand-strong);
+      text-underline-offset: 0.18em;
+      text-decoration-thickness: 0.08em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 0.14em;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      inset-block-start: 12px;
+      inset-inline-start: 12px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: var(--text);
+      color: var(--page);
+      transform: translateY(-180%);
+      transition: transform 160ms ease-out;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      padding: 20px clamp(20px, 5vw, 56px);
+    }
+
+    .topbar {
+      width: min(100%, 1120px);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--brand);
+      color: var(--brand-ink);
+      box-shadow: var(--shadow);
+    }
+
+    .language-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      background: color-mix(in srgb, var(--surface) 88%, transparent);
+    }
+
+    .language-nav a {
+      min-height: 40px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .language-nav a:hover {
+      background: var(--surface-soft);
+    }
+
+    main {
+      padding: 32px clamp(18px, 5vw, 56px) 80px;
+    }
+
+    .hero {
+      width: min(100%, 940px);
+      margin: 26px auto 56px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--brand-strong);
+      font-size: 0.78rem;
+      font-weight: 780;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 790px;
+      margin: 0 auto 18px;
+      font-size: clamp(2.25rem, 7vw, 4.65rem);
+      letter-spacing: -0.055em;
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.2vw, 1.24rem);
+    }
+
+    .updated {
+      display: inline-flex;
+      margin-top: 22px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--surface);
+      font-size: 0.86rem;
+      font-weight: 620;
+    }
+
+    .summary-grid {
+      width: min(100%, 940px);
+      margin: 0 auto 64px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .summary-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .summary-card svg {
+      width: 26px;
+      height: 26px;
+      color: var(--brand-strong);
+    }
+
+    .summary-card h2 {
+      margin: 13px 0 7px;
+      font-size: 1.04rem;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.58;
+    }
+
+    .terms {
+      width: min(100%, var(--content));
+      margin-inline: auto;
+    }
+
+    .terms + .terms {
+      margin-top: 80px;
+      padding-top: 72px;
+      border-top: 1px solid var(--border);
+    }
+
+    .terms-header {
+      margin-bottom: 42px;
+    }
+
+    .terms-header h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 5vw, 2.7rem);
+      letter-spacing: -0.035em;
+    }
+
+    .terms-header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .terms section {
+      scroll-margin-top: 24px;
+    }
+
+    .terms section + section {
+      margin-top: 48px;
+    }
+
+    .terms h3 {
+      margin: 0 0 15px;
+      font-size: 1.38rem;
+      letter-spacing: -0.018em;
+    }
+
+    .terms p {
+      margin: 0 0 16px;
+    }
+
+    .terms ul {
+      margin: 12px 0 18px;
+      padding-inline-start: 1.35rem;
+    }
+
+    .terms li + li {
+      margin-top: 10px;
+    }
+
+    .callout {
+      margin: 24px 0;
+      padding: 20px 22px;
+      border-inline-start: 4px solid var(--brand);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      background: var(--surface-soft);
+    }
+
+    [dir="rtl"] .callout {
+      border-radius: var(--radius-md) 0 0 var(--radius-md);
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .feature-item {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .feature-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .feature-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      padding: 28px 20px 48px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding-inline: 16px;
+      }
+
+      .brand span:last-child {
+        display: none;
+      }
+
+      main {
+        padding-top: 14px;
+      }
+
+      .hero {
+        margin-top: 18px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .skip-link {
+        transition: none;
+      }
+    }
+
+    @media print {
+      :root {
+        --page: #ffffff;
+        --surface: #ffffff;
+        --surface-soft: #f4f7f4;
+        --text: #111111;
+        --muted: #404040;
+        --brand: #006c35;
+        --brand-strong: #00522a;
+        --border: #cccccc;
+      }
+
+      body {
+        background: #ffffff;
+        font-size: 11pt;
+      }
+
+      .language-nav,
+      .skip-link {
+        display: none;
+      }
+
+      .summary-card,
+      .contact-card {
+        box-shadow: none;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the Terms of Use</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="#top" aria-label="Ratiby Terms of Use home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2h9l3 3v17H6z"></path>
+            <path d="M14 2v4h4M9 11h6M9 15h6"></path>
+          </svg>
+        </span>
+        <span>Ratiby · راتبي</span>
+      </a>
+
+      <nav class="language-nav" aria-label="Terms languages">
+        <a href="#english" lang="en">English</a>
+        <a href="#arabic" lang="ar" dir="rtl">العربية</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="hero" id="top">
+      <p class="eyebrow">Clear terms, fair expectations</p>
+      <h1>Terms of Use</h1>
+      <p class="hero-copy">These terms explain your rights and responsibilities when using Ratiby, including its free features and optional Pro subscription.</p>
+      <p class="updated">Effective and last updated: 19 September 2026</p>
+    </div>
+
+    <section class="summary-grid" aria-label="Terms summary">
+      <div class="summary-card">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5Z"></path>
+          <path d="M8 7h6M8 11h7"></path>
+        </svg>
+        <h2>Personal license</h2>
+        <p>You receive a limited license to use Ratiby for lawful, personal salary planning.</p>
+      </div>
+      <div class="summary-card">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M12 7v5l3 2"></path>
+        </svg>
+        <h2>Monthly subscription</h2>
+        <p>Pro renews automatically until canceled through the store that processed your purchase.</p>
+      </div>
+      <div class="summary-card">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3 2.5 20h19Z"></path>
+          <path d="M12 9v4m0 3h.01"></path>
+        </svg>
+        <h2>Planning, not advice</h2>
+        <p>Ratiby provides estimates based on your entries; it does not provide financial advice or guarantees.</p>
+      </div>
+    </section>
+
+    <article class="terms" id="english" lang="en">
+      <header class="terms-header">
+        <h2>Terms of Use and End-User License Agreement</h2>
+        <p>This English version is followed by a complete Arabic version.</p>
+      </header>
+
+      <section aria-labelledby="en-acceptance">
+        <h3 id="en-acceptance">1. Acceptance and eligibility</h3>
+        <p>These Terms of Use and End-User License Agreement (the "Terms") form a binding agreement between you and the developer of Ratiby ("Ratiby," "we," "us," or "our"). They govern your download, installation, access to, purchase through, and use of the Ratiby mobile application and related services (collectively, the "App").</p>
+        <p>By downloading, accessing, purchasing through, or using the App, you agree to these Terms and our <a href="privacy-policy.html">Privacy Policy</a>. If you do not agree, do not use the App. You must be at least 18 years old or the age of legal majority where you live and able to enter a binding contract. A parent or legal guardian who permits another person to use the App is responsible for that use.</p>
+      </section>
+
+      <section aria-labelledby="en-service">
+        <h3 id="en-service">2. What Ratiby does</h3>
+        <p>Ratiby is a local-first personal salary-planning tool. It can help you record income and expenses, organize recurring commitments and budgets, estimate an available balance and safe daily spending amount, schedule local reminders, and export selected data. Financial records are generally stored on your device, as explained in the Privacy Policy.</p>
+        <div class="callout">
+          <p><strong>Ratiby is not a bank or financial adviser.</strong> The App does not hold, transfer, invest, lend, insure, or manage money; connect to your bank account; initiate payments; or verify that bills have actually been paid.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="en-license">
+        <h3 id="en-license">3. License and permitted use</h3>
+        <p>Subject to these Terms, we grant you a limited, personal, revocable, non-exclusive, non-transferable, and non-sublicensable license to install and use the App on devices you own or control, solely for lawful personal use and as permitted by the rules of the app store from which you obtained it.</p>
+        <p>You must not:</p>
+        <ul>
+          <li>copy, sell, rent, sublicense, distribute, or commercially exploit the App except where applicable law expressly permits it;</li>
+          <li>reverse engineer, decompile, disassemble, modify, bypass, or attempt to derive the source code of the App, except to the limited extent such a restriction is prohibited by law;</li>
+          <li>circumvent subscription checks, access controls, quotas, security features, or technical restrictions;</li>
+          <li>use the App unlawfully, fraudulently, to harm another person, or to introduce malware or interfere with the App or related services;</li>
+          <li>misrepresent your relationship with Ratiby or use our names, branding, or content without permission; or</li>
+          <li>use automated means to probe or overload subscription or other network services used by the App.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="en-data">
+        <h3 id="en-data">4. Your entries, device, and backups</h3>
+        <p>You retain ownership of the financial records and other content you enter into the App. Because Ratiby is local-first and does not provide an account or custom cloud database, you are responsible for the accuracy of your entries, your device's security, your operating-system backups, and any exported files.</p>
+        <p>Deleting the App, clearing its storage, losing or replacing your device, or a device failure may permanently remove local data. Restoring a Pro purchase restores eligible subscription access only; it does not restore your salary, expenses, budgets, notes, preferences, PIN, or other local records. Keep appropriate backups or exports when needed.</p>
+      </section>
+
+      <section aria-labelledby="en-calculations">
+        <h3 id="en-calculations">5. Calculations and no financial advice</h3>
+        <p>Ratiby's balances, spending amounts, payday dates, budget progress, recurring-charge schedules, reminders, summaries, and forecasts are estimates calculated from the information you provide and the App's rules. They may be incomplete, delayed, unavailable, or incorrect due to inaccurate entries, date assumptions, software defects, device settings, missed notifications, or other causes.</p>
+        <p>The App provides general organizational information only. It is not financial, investment, banking, accounting, tax, legal, debt, or credit advice, and no fiduciary or professional-client relationship is created. Do not rely on Ratiby as the sole basis for a financial decision. Verify important amounts, dates, obligations, and account balances independently and obtain qualified professional advice when appropriate.</p>
+        <p>We do not guarantee that using Ratiby will prevent overspending, missed payments, bank fees, debt, loss, or any other financial outcome.</p>
+      </section>
+
+      <section aria-labelledby="en-plans">
+        <h3 id="en-plans">6. Free features and Ratiby Pro</h3>
+        <p>Ratiby may offer free functionality and an optional Ratiby Pro subscription. Current limits and benefits are displayed in the App and purchase screen before you subscribe. At the date of these Terms:</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <strong>Free</strong>
+            <p>Core income, expense, balance, safe-daily-spending, history, search, reminders, security, and CSV export features; up to three unfinished recurring commitments and two active or future goals; and use of existing categories.</p>
+          </div>
+          <div class="feature-item">
+            <strong>Ratiby Pro</strong>
+            <p>Unlimited recurring commitments and goals, category creation and personalization, and monthly PDF export, together with the Free features.</p>
+          </div>
+        </div>
+        <p>If Pro expires or is canceled, your existing financial records remain on your device. Existing commitments, goals, categories, calculations, and reminders are not deleted solely because Pro ends, but creating additional items or using Pro-only actions may be restricted until you are within the Free allowance or resubscribe.</p>
+        <p>We may improve, add, remove, or change features and reasonable Free limits. We will not knowingly take away an already-paid subscription benefit during its paid period without an appropriate remedy required by the app store rules or applicable law.</p>
+      </section>
+
+      <section aria-labelledby="en-subscriptions">
+        <h3 id="en-subscriptions">7. Subscription billing, renewal, and cancellation</h3>
+        <ul>
+          <li><strong>Offer details:</strong> The purchase screen shows the subscription period, localized price, currency, included benefits, and any trial or introductory offer. Those displayed details are part of these Terms. If they conflict with a generic description here, the purchase screen and applicable app-store terms control for that transaction.</li>
+          <li><strong>Auto-renewal:</strong> Ratiby Pro is an auto-renewing subscription. Unless you cancel before renewal, your Apple App Store or Google Play account will be charged for the next billing period at the price shown by the store, including applicable taxes.</li>
+          <li><strong>Trials and offers:</strong> A trial or introductory offer applies only if it is shown and you are eligible under the store's rules. Unless canceled before the offer ends, it converts to the paid subscription shown on the purchase screen.</li>
+          <li><strong>Cancellation:</strong> You can cancel at any time through your device's subscription settings, <a href="https://apps.apple.com/account/subscriptions" rel="noopener noreferrer">Apple subscriptions</a>, or <a href="https://play.google.com/store/account/subscriptions" rel="noopener noreferrer">Google Play subscriptions</a>. Deleting Ratiby does not cancel a subscription. Cancellation normally takes effect at the end of the current paid period, unless the store or applicable law provides otherwise.</li>
+          <li><strong>Price changes:</strong> Apple or Google may notify you of price changes and request approval where required. If approval is required and not provided, the subscription may end.</li>
+          <li><strong>Billing problems:</strong> The store may retry payment, provide a grace period, pause access, or end the subscription according to its rules. Pro access depends on the store and RevenueCat confirming an active entitlement.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="en-refunds">
+        <h3 id="en-refunds">8. Payments, refunds, and restoration</h3>
+        <p>Purchases are processed by Apple or Google, not directly by Ratiby. Their payment, cancellation, and refund rules apply, together with mandatory consumer law. Except where required by law or allowed by the store, charges are non-refundable and no credit is provided for a partially used billing period.</p>
+        <p>Request an Apple refund through <a href="https://reportaproblem.apple.com/" rel="noopener noreferrer">Report a Problem</a>. For Google Play purchases, use <a href="https://support.google.com/googleplay/workflow/9813244" rel="noopener noreferrer">Google Play's refund process</a> or contact us when Google's policy directs you to the developer. A granted refund, chargeback, revocation, or payment failure may end Pro access.</p>
+        <p>You may use “Restore purchases” in the App to ask the store and RevenueCat to restore an eligible entitlement. Because Ratiby uses anonymous subscription identifiers and no Ratiby account, restoration may depend on the store account, platform, device, and transfer rules. Cross-platform restoration is not guaranteed.</p>
+      </section>
+
+      <section aria-labelledby="en-third-parties">
+        <h3 id="en-third-parties">9. App stores and third-party services</h3>
+        <p>The App uses services provided by Apple, Google, RevenueCat, and your device operating system. Their own terms and privacy practices apply to their services. You must comply with applicable third-party terms, including your app-store account and wireless-data agreement. We are not responsible for a third-party service's availability, decisions, content, or independent acts, except where applicable law provides otherwise.</p>
+        <p>Links are provided for convenience and do not imply endorsement. Third-party services may change or become unavailable, which may affect purchases, restoration, subscription verification, sharing, notifications, or other App features.</p>
+      </section>
+
+      <section aria-labelledby="en-ip">
+        <h3 id="en-ip">10. Intellectual property</h3>
+        <p>The App—including its software, design, text, graphics, trademarks, and other materials—is owned by us or our licensors and protected by applicable intellectual-property laws. These Terms grant a license, not ownership. All rights not expressly granted are reserved. Open-source components remain subject to their respective licenses.</p>
+        <p>If you provide feedback, you grant us a worldwide, perpetual, irrevocable, royalty-free right to use it to improve Ratiby without identifying you or owing compensation. You are not required to provide feedback.</p>
+      </section>
+
+      <section aria-labelledby="en-availability">
+        <h3 id="en-availability">11. Availability, updates, and changes</h3>
+        <p>We may release updates, fixes, or changes and may require an update for continued operation, security, or compatibility. The App or a feature may be unavailable because of maintenance, connectivity, device incompatibility, app-store action, third-party failure, or circumstances outside our reasonable control.</p>
+        <p>To the extent permitted by law, we may modify, suspend, or discontinue the App or a feature. Where a change materially affects an active paid subscription, we will provide the notice or remedy required by applicable law and app-store rules.</p>
+      </section>
+
+      <section aria-labelledby="en-warranty">
+        <h3 id="en-warranty">12. Disclaimers</h3>
+        <p>To the maximum extent permitted by applicable law, Ratiby and related services are provided “as is” and “as available,” with all faults. We disclaim implied warranties of merchantability, satisfactory quality, fitness for a particular purpose, accuracy, quiet enjoyment, availability, and non-infringement. We do not warrant that the App will be uninterrupted, error-free, secure, compatible with every device, or that data will never be lost.</p>
+        <p>Nothing in these Terms excludes or limits warranties or consumer rights that cannot lawfully be excluded or limited.</p>
+      </section>
+
+      <section aria-labelledby="en-liability">
+        <h3 id="en-liability">13. Limitation of liability</h3>
+        <p>To the maximum extent permitted by law, we and our licensors will not be liable for indirect, incidental, special, exemplary, punitive, or consequential losses; loss of profits, opportunity, goodwill, or data; bank fees; missed payments; or financial decisions arising from or related to the App, even if advised that such loss was possible.</p>
+        <p>To the maximum extent permitted by law, our total aggregate liability arising from or relating to the App or these Terms will not exceed the greater of (a) the amount you paid for Ratiby during the 12 months before the event giving rise to the claim or (b) US$50 or its local-currency equivalent.</p>
+        <p>These limits do not apply to fraud, willful misconduct, gross negligence, death or personal injury caused by negligence, or any liability or statutory consumer remedy that cannot legally be excluded or limited.</p>
+      </section>
+
+      <section aria-labelledby="en-termination">
+        <h3 id="en-termination">14. Termination</h3>
+        <p>You may stop using and delete the App at any time. Your license ends automatically if you materially violate these Terms. We may also suspend network-dependent functions or access to Pro where reasonably necessary to address fraud, payment reversal, security, legal requirements, or misuse.</p>
+        <p>Ending your license or deleting the App does not automatically cancel a store subscription; cancel it separately as described above. Provisions that by their nature should survive—including ownership, disclaimers, liability limits, governing law, and dispute provisions—will survive termination.</p>
+      </section>
+
+      <section aria-labelledby="en-apple">
+        <h3 id="en-apple">15. Additional terms for Apple users</h3>
+        <p>If you obtained Ratiby through Apple's App Store, the following terms apply:</p>
+        <ul>
+          <li>These Terms are between you and us, not Apple. We, not Apple, are responsible for Ratiby and its content.</li>
+          <li>Your license is non-transferable and limited to using Ratiby on Apple-branded products you own or control as permitted by the Apple Media Services Usage Rules, including permitted Family Sharing or volume purchasing.</li>
+          <li>We are responsible for maintenance and support as required by these Terms or applicable law. Apple has no obligation to provide maintenance or support.</li>
+          <li>If Ratiby fails to conform to an applicable warranty, you may notify Apple, and Apple may refund the purchase price, if any, for the App. To the maximum extent permitted by law, Apple has no other warranty obligation. We are responsible for other valid warranty claims.</li>
+          <li>We, not Apple, are responsible for addressing claims concerning Ratiby, including product-liability, regulatory, consumer-protection, and privacy claims, and for investigating and resolving any third-party intellectual-property claim concerning Ratiby.</li>
+          <li>You represent that you are not located in a country subject to a U.S. Government embargo or designated as supporting terrorism and are not listed on a U.S. Government prohibited- or restricted-party list.</li>
+          <li>Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you once you accept them.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="en-law">
+        <h3 id="en-law">16. Governing law and disputes</h3>
+        <p>These Terms are governed by the laws of [INSERT GOVERNING JURISDICTION], without regard to conflict-of-law rules. The courts of [INSERT COURT LOCATION] will have jurisdiction over disputes, unless mandatory consumer law gives you the right to bring a claim in another court or under another law.</p>
+        <p>Before filing a claim, please contact us and describe the issue so we can try to resolve it informally. Nothing in these Terms prevents either party from seeking urgent injunctive relief or using a consumer-protection or data-protection complaint process available under applicable law.</p>
+      </section>
+
+      <section aria-labelledby="en-general">
+        <h3 id="en-general">17. General terms</h3>
+        <p>These Terms and the Privacy Policy are the entire agreement between you and us regarding the App, except for transaction-specific store terms. If a provision is unenforceable, it will be limited or removed only to the minimum extent necessary and the rest will remain effective. A failure to enforce a provision is not a waiver. You may not assign these Terms without our consent; we may assign them in connection with a reorganization, financing, merger, or sale, subject to applicable law.</p>
+        <p>We may update these Terms for legal, security, operational, or product reasons. We will update the date above and give additional notice where required. Material changes will apply prospectively. Continuing to use the App after revised Terms take effect constitutes acceptance where permitted by law; otherwise, we will request consent when required.</p>
+      </section>
+
+      <section aria-labelledby="en-contact">
+        <h3 id="en-contact">18. Developer and contact information</h3>
+        <div class="contact-card">
+          <p><strong>Support email:</strong> <a href="mailto:eddahbirs@gmail.com"></a></p>
+          <p>Use the subject line “Ratiby Terms Question” for questions, complaints, or claims concerning the App.</p>
+        </div>
+      </section>
+    </article>
+
+    <article class="terms" id="arabic" lang="ar" dir="rtl">
+      <header class="terms-header">
+        <h2>شروط الاستخدام واتفاقية ترخيص المستخدم النهائي</h2>
+        <p>توضح هذه النسخة العربية الكاملة حقوقك ومسؤولياتك عند استخدام راتبي.</p>
+      </header>
+
+      <section aria-labelledby="ar-acceptance">
+        <h3 id="ar-acceptance">١. القبول والأهلية</h3>
+        <p>تشكل شروط الاستخدام واتفاقية ترخيص المستخدم النهائي هذه («الشروط») اتفاقًا ملزمًا بينك وبين مطوّر راتبي (ويشار إليه بـ «راتبي» أو «نحن» أو «لنا»). وتحكم تنزيل تطبيق راتبي للجوال وتثبيته والوصول إليه والشراء من خلاله واستخدامه والخدمات المرتبطة به (ويشار إليها مجتمعة بـ «التطبيق»).</p>
+        <p>بتنزيل التطبيق أو الوصول إليه أو الشراء من خلاله أو استخدامه، فإنك توافق على هذه الشروط وعلى <a href="privacy-policy.html">سياسة الخصوصية</a>. إذا لم توافق، فلا تستخدم التطبيق. يجب أن يكون عمرك ١٨ عامًا على الأقل أو أن تكون قد بلغت سن الرشد النظامي في مكان إقامتك وأن تكون قادرًا على إبرام عقد ملزم. ويتحمل الوالد أو الولي النظامي الذي يسمح لشخص آخر باستخدام التطبيق مسؤولية ذلك الاستخدام.</p>
+      </section>
+
+      <section aria-labelledby="ar-service">
+        <h3 id="ar-service">٢. ما الذي يقدمه راتبي</h3>
+        <p>راتبي أداة شخصية محلية بالدرجة الأولى لتخطيط الراتب. يمكنه مساعدتك على تسجيل الدخل والمصروفات وتنظيم الالتزامات المتكررة والميزانيات وتقدير الرصيد المتاح ومبلغ الإنفاق اليومي الآمن وجدولة التذكيرات المحلية وتصدير بيانات محددة. تُخزّن السجلات المالية عادةً على جهازك كما هو موضح في سياسة الخصوصية.</p>
+        <div class="callout">
+          <p><strong>راتبي ليس بنكًا ولا مستشارًا ماليًا.</strong> لا يحتفظ التطبيق بالأموال ولا يحولها أو يستثمرها أو يقرضها أو يؤمّنها أو يديرها، ولا يتصل بحسابك البنكي أو ينفذ المدفوعات أو يتحقق من سداد الفواتير فعليًا.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="ar-license">
+        <h3 id="ar-license">٣. الترخيص والاستخدام المسموح</h3>
+        <p>مع مراعاة هذه الشروط، نمنحك ترخيصًا محدودًا وشخصيًا وقابلًا للإلغاء وغير حصري وغير قابل للنقل أو الترخيص من الباطن لتثبيت التطبيق واستخدامه على الأجهزة التي تملكها أو تتحكم فيها، للاستخدام الشخصي المشروع فقط ووفق قواعد متجر التطبيقات الذي حصلت منه عليه.</p>
+        <p>لا يجوز لك:</p>
+        <ul>
+          <li>نسخ التطبيق أو بيعه أو تأجيره أو إعادة ترخيصه أو توزيعه أو استغلاله تجاريًا إلا عندما يسمح النظام الساري بذلك صراحةً؛</li>
+          <li>إجراء هندسة عكسية أو فك ترجمة التطبيق أو تفكيكه أو تعديله أو تجاوز قيوده أو محاولة استنتاج شفرته المصدرية، إلا بالقدر المحدود الذي يحظر فيه النظام مثل هذا القيد؛</li>
+          <li>التحايل على التحقق من الاشتراك أو ضوابط الوصول أو الحدود أو ميزات الأمان أو القيود التقنية؛</li>
+          <li>استخدام التطبيق بطريقة غير مشروعة أو احتيالية أو للإضرار بأي شخص، أو إدخال برمجيات ضارة أو تعطيل التطبيق أو الخدمات المرتبطة به؛</li>
+          <li>تحريف علاقتك براتبي أو استخدام أسمائنا أو علامتنا أو محتوياتنا دون إذن؛ أو</li>
+          <li>استخدام وسائل آلية لفحص خدمات الاشتراك أو غيرها من خدمات الشبكة التي يستخدمها التطبيق أو تحميلها بصورة مفرطة.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="ar-data">
+        <h3 id="ar-data">٤. مدخلاتك وجهازك والنسخ الاحتياطية</h3>
+        <p>تحتفظ بملكية السجلات المالية وغيرها من المحتوى الذي تدخله في التطبيق. ولأن راتبي محلي بالدرجة الأولى ولا يوفر حسابًا أو قاعدة بيانات سحابية خاصة به، فأنت مسؤول عن دقة مدخلاتك وأمان جهازك والنسخ الاحتياطية لنظام التشغيل وأي ملفات تصدّرها.</p>
+        <p>قد يؤدي حذف التطبيق أو مسح مساحة تخزينه أو فقدان جهازك أو استبداله أو تعطله إلى حذف البيانات المحلية نهائيًا. تؤدي استعادة شراء Pro إلى استعادة صلاحية الاشتراك المؤهلة فقط؛ ولا تستعيد راتبك أو مصروفاتك أو ميزانياتك أو ملاحظاتك أو تفضيلاتك أو رمز PIN أو أي سجلات محلية أخرى. احتفظ بالنسخ الاحتياطية أو الملفات المصدّرة المناسبة عند الحاجة.</p>
+      </section>
+
+      <section aria-labelledby="ar-calculations">
+        <h3 id="ar-calculations">٥. الحسابات وعدم تقديم مشورة مالية</h3>
+        <p>إن الأرصدة ومبالغ الإنفاق وتواريخ الراتب وتقدم الميزانيات وجداول الرسوم المتكررة والتذكيرات والملخصات والتوقعات في راتبي هي تقديرات تُحسب من المعلومات التي تقدمها وقواعد التطبيق. وقد تكون ناقصة أو متأخرة أو غير متاحة أو غير صحيحة بسبب مدخلات غير دقيقة أو افتراضات التاريخ أو عيوب البرمجيات أو إعدادات الجهاز أو عدم وصول إشعار أو أسباب أخرى.</p>
+        <p>يقدم التطبيق معلومات تنظيمية عامة فقط، وليس مشورة مالية أو استثمارية أو بنكية أو محاسبية أو ضريبية أو قانونية أو متعلقة بالديون أو الائتمان، ولا تنشأ عنه علاقة ائتمانية أو مهنية مع عميل. لا تعتمد على راتبي وحده لاتخاذ قرار مالي. تحقق بصورة مستقلة من المبالغ والتواريخ والالتزامات وأرصدة الحسابات المهمة، واستعن بمختص مؤهل عند الحاجة.</p>
+        <p>لا نضمن أن يمنع استخدام راتبي الإنفاق الزائد أو فوات المدفوعات أو الرسوم البنكية أو الديون أو الخسائر أو أي نتيجة مالية أخرى.</p>
+      </section>
+
+      <section aria-labelledby="ar-plans">
+        <h3 id="ar-plans">٦. الميزات المجانية وRatiby Pro</h3>
+        <p>قد يقدم راتبي وظائف مجانية واشتراكًا اختياريًا في Ratiby Pro. تظهر الحدود والمزايا الحالية في التطبيق وشاشة الشراء قبل الاشتراك. وفي تاريخ هذه الشروط:</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <strong>الخطة المجانية</strong>
+            <p>ميزات الدخل والمصروفات والرصيد والإنفاق اليومي الآمن والسجل والبحث والتذكيرات والأمان وتصدير CSV الأساسية؛ وحتى ثلاثة التزامات متكررة غير منتهية وهدفين نشطين أو مستقبليين؛ واستخدام التصنيفات الموجودة.</p>
+          </div>
+          <div class="feature-item">
+            <strong>Ratiby Pro</strong>
+            <p>التزامات متكررة وأهداف بلا حد، وإنشاء التصنيفات وتخصيصها، وتصدير ملخص شهري بصيغة PDF، إضافة إلى ميزات الخطة المجانية.</p>
+          </div>
+        </div>
+        <p>إذا انتهى اشتراك Pro أو أُلغي، تبقى سجلاتك المالية الموجودة على جهازك. ولا تُحذف الالتزامات أو الأهداف أو التصنيفات أو الحسابات أو التذكيرات الموجودة لمجرد انتهاء Pro، لكن قد يُقيّد إنشاء عناصر إضافية أو استخدام إجراءات Pro حتى تصبح ضمن حدود الخطة المجانية أو تعيد الاشتراك.</p>
+        <p>يجوز لنا تحسين الميزات أو إضافتها أو إزالتها أو تغييرها وتعديل الحدود المجانية المعقولة. ولن نسحب عن علم ميزة اشتراك مدفوعة بالفعل خلال مدته المدفوعة دون العلاج المناسب الذي تفرضه قواعد متجر التطبيقات أو النظام الساري.</p>
+      </section>
+
+      <section aria-labelledby="ar-subscriptions">
+        <h3 id="ar-subscriptions">٧. فوترة الاشتراك وتجديده وإلغاؤه</h3>
+        <ul>
+          <li><strong>تفاصيل العرض:</strong> تعرض شاشة الشراء مدة الاشتراك والسعر والعملة المحليين والمزايا المشمولة وأي فترة تجريبية أو عرض تمهيدي. تشكل هذه التفاصيل المعروضة جزءًا من هذه الشروط. وإذا تعارضت مع وصف عام هنا، فتسود شاشة الشراء وشروط متجر التطبيقات السارية على تلك المعاملة.</li>
+          <li><strong>التجديد التلقائي:</strong> Ratiby Pro اشتراك يتجدد تلقائيًا. ما لم تُلغِ قبل التجديد، سيُخصم من حسابك في Apple App Store أو Google Play ثمن فترة الفوترة التالية بالسعر الذي يعرضه المتجر، شاملًا الضرائب السارية.</li>
+          <li><strong>الفترات التجريبية والعروض:</strong> لا تسري فترة تجريبية أو عرض تمهيدي إلا إذا ظهر لك وكنت مؤهلًا وفق قواعد المتجر. وما لم تُلغِ قبل انتهاء العرض، يتحول إلى الاشتراك المدفوع الموضح في شاشة الشراء.</li>
+          <li><strong>الإلغاء:</strong> يمكنك الإلغاء في أي وقت من إعدادات الاشتراكات في جهازك أو صفحة <a href="https://apps.apple.com/account/subscriptions" rel="noopener noreferrer">اشتراكات Apple</a> أو صفحة <a href="https://play.google.com/store/account/subscriptions" rel="noopener noreferrer">اشتراكات Google Play</a>. حذف راتبي لا يلغي الاشتراك. يسري الإلغاء عادةً عند نهاية الفترة المدفوعة الحالية، ما لم ينص المتجر أو النظام الساري على خلاف ذلك.</li>
+          <li><strong>تغيير الأسعار:</strong> قد تُشعرك Apple أو Google بتغييرات الأسعار وتطلب موافقتك متى كان ذلك لازمًا. وإذا كانت الموافقة مطلوبة ولم تقدمها، فقد ينتهي الاشتراك.</li>
+          <li><strong>مشكلات الفوترة:</strong> قد يعيد المتجر محاولة الدفع أو يمنح فترة سماح أو يوقف الوصول أو ينهي الاشتراك وفق قواعده. وتعتمد صلاحية Pro على تأكيد المتجر وRevenueCat لوجود استحقاق نشط.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="ar-refunds">
+        <h3 id="ar-refunds">٨. المدفوعات والاسترداد واستعادة الشراء</h3>
+        <p>تعالج Apple أو Google عمليات الشراء، وليس راتبي مباشرةً. وتسري قواعدهما المتعلقة بالدفع والإلغاء والاسترداد إلى جانب أحكام حماية المستهلك الإلزامية. وما لم يتطلب النظام أو يسمح المتجر بخلاف ذلك، لا تُرد الرسوم ولا يُمنح رصيد عن جزء مستخدم من فترة الفوترة.</p>
+        <p>اطلب استرداد مشتريات Apple من خلال <a href="https://reportaproblem.apple.com/" rel="noopener noreferrer">الإبلاغ عن مشكلة</a>. ولمشتريات Google Play، استخدم <a href="https://support.google.com/googleplay/workflow/9813244" rel="noopener noreferrer">إجراءات الاسترداد في Google Play</a> أو تواصل معنا عندما توجهك سياسة Google إلى المطور. وقد يؤدي الاسترداد أو الاعتراض على الرسوم أو إلغاء المعاملة أو فشل الدفع إلى إنهاء صلاحية Pro.</p>
+        <p>يمكنك استخدام «استعادة المشتريات» في التطبيق لطلب استعادة استحقاق مؤهل من المتجر وRevenueCat. ولأن راتبي يستخدم معرّفات اشتراك مجهولة ولا يوفر حسابًا في راتبي، فقد تعتمد الاستعادة على حساب المتجر والمنصة والجهاز وقواعد النقل. ولا نضمن الاستعادة بين منصات مختلفة.</p>
+      </section>
+
+      <section aria-labelledby="ar-third-parties">
+        <h3 id="ar-third-parties">٩. متاجر التطبيقات وخدمات الأطراف الثالثة</h3>
+        <p>يستخدم التطبيق خدمات تقدمها Apple وGoogle وRevenueCat ونظام تشغيل جهازك. وتسري شروطهم وممارسات الخصوصية الخاصة بهم على خدماتهم. يجب عليك الالتزام بشروط الأطراف الثالثة السارية، بما فيها شروط حساب متجر التطبيقات واتفاقية بيانات الاتصال اللاسلكي. ولا نتحمل مسؤولية توفر خدمة طرف ثالث أو قراراتها أو محتواها أو أفعالها المستقلة، إلا عندما ينص النظام الساري على خلاف ذلك.</p>
+        <p>تُقدم الروابط للتسهيل ولا تعني التأييد. وقد تتغير خدمات الأطراف الثالثة أو تصبح غير متاحة، مما قد يؤثر في عمليات الشراء أو الاستعادة أو التحقق من الاشتراك أو المشاركة أو الإشعارات أو ميزات أخرى في التطبيق.</p>
+      </section>
+
+      <section aria-labelledby="ar-ip">
+        <h3 id="ar-ip">١٠. الملكية الفكرية</h3>
+        <p>يعود التطبيق، بما في ذلك برمجياته وتصميمه ونصوصه ورسوماته وعلاماته التجارية ومواده الأخرى، إلينا أو إلى مرخصينا وتحميه أنظمة الملكية الفكرية السارية. تمنح هذه الشروط ترخيصًا لا ملكية، ونحتفظ بجميع الحقوق غير الممنوحة صراحةً. وتبقى المكونات مفتوحة المصدر خاضعة لتراخيصها الخاصة.</p>
+        <p>إذا قدمت ملاحظات، فإنك تمنحنا حقًا عالميًا ودائمًا وغير قابل للإلغاء ومن دون مقابل لاستخدامها في تحسين راتبي من دون تعريفك أو دفع تعويض لك. ولست ملزمًا بتقديم ملاحظات.</p>
+      </section>
+
+      <section aria-labelledby="ar-availability">
+        <h3 id="ar-availability">١١. التوفر والتحديثات والتغييرات</h3>
+        <p>قد نصدر تحديثات أو إصلاحات أو تغييرات، وقد نطلب تحديثًا لاستمرار التشغيل أو الأمان أو التوافق. وقد يصبح التطبيق أو إحدى ميزاته غير متاح بسبب الصيانة أو الاتصال أو عدم توافق الجهاز أو إجراء من متجر التطبيقات أو تعطل طرف ثالث أو ظروف خارجة عن سيطرتنا المعقولة.</p>
+        <p>يجوز لنا، بالقدر الذي يسمح به النظام، تعديل التطبيق أو ميزة أو تعليقها أو إيقافها. وإذا أثر تغيير جوهريًا في اشتراك مدفوع ونشط، فسنقدم الإشعار أو العلاج الذي يتطلبه النظام الساري وقواعد متجر التطبيقات.</p>
+      </section>
+
+      <section aria-labelledby="ar-warranty">
+        <h3 id="ar-warranty">١٢. إخلاء الضمانات</h3>
+        <p>إلى أقصى حد يسمح به النظام الساري، يُقدم راتبي والخدمات المرتبطة به «كما هو» و«حسب التوفر» وبجميع عيوبه. ونخلي مسؤوليتنا عن الضمانات الضمنية المتعلقة بالقابلية للتسويق والجودة المرضية والملاءمة لغرض معين والدقة والانتفاع الهادئ والتوفر وعدم التعدي. ولا نضمن عمل التطبيق دون انقطاع أو أخطاء، أو أمانه أو توافقه مع كل جهاز، أو عدم فقدان البيانات مطلقًا.</p>
+        <p>لا يستبعد أي نص في هذه الشروط الضمانات أو حقوق المستهلك التي لا يجوز نظامًا استبعادها أو تقييدها.</p>
+      </section>
+
+      <section aria-labelledby="ar-liability">
+        <h3 id="ar-liability">١٣. حدود المسؤولية</h3>
+        <p>إلى أقصى حد يسمح به النظام، لا نتحمل نحن أو مرخصونا مسؤولية الخسائر غير المباشرة أو العرضية أو الخاصة أو النموذجية أو العقابية أو التبعية؛ أو خسارة الأرباح أو الفرص أو السمعة أو البيانات؛ أو الرسوم البنكية أو المدفوعات الفائتة أو القرارات المالية الناشئة عن التطبيق أو المرتبطة به، حتى لو أُبلغنا بإمكان وقوع هذه الخسارة.</p>
+        <p>إلى أقصى حد يسمح به النظام، لا تتجاوز مسؤوليتنا الإجمالية الناشئة عن التطبيق أو هذه الشروط القيمة الأعلى من: (أ) المبلغ الذي دفعته لراتبي خلال الاثني عشر شهرًا السابقة للحدث الذي نشأت عنه المطالبة، أو (ب) ٥٠ دولارًا أمريكيًا أو ما يعادلها بالعملة المحلية.</p>
+        <p>لا تسري هذه الحدود على الاحتيال أو سوء السلوك العمدي أو الإهمال الجسيم أو الوفاة أو الإصابة الشخصية الناتجة عن الإهمال، ولا على أي مسؤولية أو علاج نظامي للمستهلك لا يجوز استبعاده أو تقييده نظامًا.</p>
+      </section>
+
+      <section aria-labelledby="ar-termination">
+        <h3 id="ar-termination">١٤. الإنهاء</h3>
+        <p>يمكنك التوقف عن استخدام التطبيق وحذفه في أي وقت. وينتهي ترخيصك تلقائيًا إذا خالفت هذه الشروط مخالفة جوهرية. ويجوز لنا أيضًا تعليق الوظائف المعتمدة على الشبكة أو الوصول إلى Pro عندما يكون ذلك ضروريًا بصورة معقولة لمعالجة الاحتيال أو عكس الدفع أو الأمان أو المتطلبات النظامية أو إساءة الاستخدام.</p>
+        <p>إنهاء الترخيص أو حذف التطبيق لا يلغي اشتراك المتجر تلقائيًا؛ ألغِه بصورة مستقلة كما هو موضح أعلاه. وتبقى الأحكام التي ينبغي بطبيعتها أن تستمر، بما فيها الملكية وإخلاء الضمانات وحدود المسؤولية والقانون واجب التطبيق وتسوية النزاعات، نافذة بعد الإنهاء.</p>
+      </section>
+
+      <section aria-labelledby="ar-apple">
+        <h3 id="ar-apple">١٥. شروط إضافية لمستخدمي Apple</h3>
+        <p>إذا حصلت على راتبي من App Store التابع لـApple، فتسري الشروط التالية:</p>
+        <ul>
+          <li>هذه الشروط بينك وبيننا وليست مع Apple. ونحن، لا Apple، مسؤولون عن راتبي ومحتواه.</li>
+          <li>ترخيصك غير قابل للنقل ومحدود باستخدام راتبي على منتجات Apple التي تملكها أو تتحكم فيها وفق قواعد استخدام Apple Media Services، بما في ذلك المشاركة العائلية أو الشراء بالجملة حيث يُسمح بهما.</li>
+          <li>نحن مسؤولون عن الصيانة والدعم وفق هذه الشروط أو النظام الساري. ولا تلتزم Apple بتقديم صيانة أو دعم.</li>
+          <li>إذا أخفق راتبي في مطابقة ضمان سارٍ، فيمكنك إخطار Apple، وقد تعيد Apple سعر شراء التطبيق، إن وجد. وإلى أقصى حد يسمح به النظام، لا تتحمل Apple أي التزام ضمان آخر، ونتحمل نحن المطالبات الصحيحة الأخرى المتعلقة بالضمان.</li>
+          <li>نحن، لا Apple، مسؤولون عن معالجة المطالبات المتعلقة براتبي، بما فيها مسؤولية المنتج والمتطلبات التنظيمية وحماية المستهلك والخصوصية، وعن التحقيق في أي مطالبة من طرف ثالث بأن راتبي ينتهك حقوق ملكيته الفكرية وتسويتها.</li>
+          <li>تقر بأنك لست موجودًا في دولة خاضعة لحظر من حكومة الولايات المتحدة أو مصنفة داعمة للإرهاب، وأن اسمك غير مدرج في قائمة حكومية أمريكية للأطراف المحظورة أو المقيدة.</li>
+          <li>تُعد Apple وشركاتها التابعة مستفيدًا من الغير من هذه الشروط، ويحق لها إنفاذها ضدك بعد قبولك لها.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="ar-law">
+        <h3 id="ar-law">١٦. القانون واجب التطبيق والنزاعات</h3>
+        <p>تخضع هذه الشروط لأنظمة [أدخل الدولة أو الولاية القضائية]، دون تطبيق قواعد تنازع القوانين. وتختص محاكم [أدخل موقع المحاكم] بالنزاعات، ما لم يمنحك نظام حماية مستهلك إلزامي الحق في إقامة المطالبة أمام محكمة أخرى أو بموجب نظام آخر.</p>
+        <p>قبل تقديم مطالبة، يُرجى التواصل معنا ووصف المشكلة لنحاول حلها وديًا. ولا يمنع أي نص في هذه الشروط أي طرف من طلب إجراء قضائي عاجل أو استخدام مسار شكوى لحماية المستهلك أو البيانات متاح بموجب النظام الساري.</p>
+      </section>
+
+      <section aria-labelledby="ar-general">
+        <h3 id="ar-general">١٧. أحكام عامة</h3>
+        <p>تشكل هذه الشروط وسياسة الخصوصية كامل الاتفاق بينك وبيننا بشأن التطبيق، باستثناء شروط المتجر الخاصة بكل معاملة. وإذا كان حكم غير قابل للإنفاذ، فيُقيد أو يُحذف بالحد الأدنى اللازم فقط وتبقى بقية الأحكام نافذة. وعدم إنفاذ حكم لا يُعد تنازلًا عنه. ولا يجوز لك إحالة هذه الشروط دون موافقتنا؛ ويجوز لنا إحالتها في إطار إعادة تنظيم أو تمويل أو اندماج أو بيع، مع مراعاة النظام الساري.</p>
+        <p>قد نحدّث هذه الشروط لأسباب نظامية أو أمنية أو تشغيلية أو متعلقة بالمنتج. سنحدّث التاريخ أعلاه ونقدم إشعارًا إضافيًا متى كان مطلوبًا. وتسري التغييرات الجوهرية على المستقبل. ويُعد استمرارك في استخدام التطبيق بعد نفاذ الشروط المعدلة قبولًا لها حيث يسمح النظام؛ وإلا فسنطلب الموافقة متى كانت مطلوبة.</p>
+      </section>
+
+      <section aria-labelledby="ar-contact">
+        <h3 id="ar-contact">١٨. بيانات المطور والتواصل</h3>
+        <div class="contact-card">
+          <p><strong>بريد الدعم الإلكتروني:</strong> <a href="mailto:eddahbirs@gmail.com"></a></p>
+          <p>استخدم عنوان الرسالة «سؤال عن شروط راتبي» للأسئلة أو الشكاوى أو المطالبات المتعلقة بالتطبيق.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>Ratiby · راتبي — A local-first salary planning app.</p>
+  </footer>
+</body>
+</html>
