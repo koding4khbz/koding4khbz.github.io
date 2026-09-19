@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Privacy Policy for Ratiby, the local-first salary planning app.">
+  <title>Privacy Policy | Ratiby</title>
+  <style>
+    :root {
+      --page: #f4f7f4;
+      --surface: #ffffff;
+      --surface-soft: #edf6f0;
+      --text: #15231b;
+      --muted: #506058;
+      --brand: #006c35;
+      --brand-strong: #00522a;
+      --brand-ink: #ffffff;
+      --border: #d8e3db;
+      --focus: #e0a800;
+      --shadow: 0 18px 50px rgba(20, 51, 34, 0.08);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --content: 760px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #0e1712;
+        --surface: #142119;
+        --surface-soft: #192d21;
+        --text: #eef8f1;
+        --muted: #b7c8bc;
+        --brand: #60d394;
+        --brand-strong: #8ae4ad;
+        --brand-ink: #082012;
+        --border: #2d4435;
+        --focus: #ffd166;
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+      }
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      background:
+        radial-gradient(circle at 10% 0%, color-mix(in srgb, var(--brand) 9%, transparent), transparent 32rem),
+        var(--page);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--brand-strong);
+      text-underline-offset: 0.18em;
+      text-decoration-thickness: 0.08em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 0.14em;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      inset-block-start: 12px;
+      inset-inline-start: 12px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: var(--text);
+      color: var(--page);
+      transform: translateY(-180%);
+      transition: transform 160ms ease-out;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      padding: 20px clamp(20px, 5vw, 56px);
+    }
+
+    .topbar {
+      width: min(100%, 1120px);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--brand);
+      color: var(--brand-ink);
+      box-shadow: var(--shadow);
+    }
+
+    .language-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      background: color-mix(in srgb, var(--surface) 88%, transparent);
+    }
+
+    .language-nav a {
+      min-height: 40px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .language-nav a:hover {
+      background: var(--surface-soft);
+    }
+
+    main {
+      padding: 32px clamp(18px, 5vw, 56px) 80px;
+    }
+
+    .hero {
+      width: min(100%, 940px);
+      margin: 26px auto 56px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--brand-strong);
+      font-size: 0.78rem;
+      font-weight: 780;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0 auto 18px;
+      font-size: clamp(2.25rem, 7vw, 4.65rem);
+      letter-spacing: -0.055em;
+    }
+
+    .hero-copy {
+      max-width: 660px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.2vw, 1.24rem);
+    }
+
+    .updated {
+      display: inline-flex;
+      margin-top: 22px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--surface);
+      font-size: 0.86rem;
+      font-weight: 620;
+    }
+
+    .summary-grid {
+      width: min(100%, 940px);
+      margin: 0 auto 64px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .summary-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .summary-card svg {
+      width: 26px;
+      height: 26px;
+      color: var(--brand-strong);
+    }
+
+    .summary-card h2 {
+      margin: 13px 0 7px;
+      font-size: 1.04rem;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.58;
+    }
+
+    .policy {
+      width: min(100%, var(--content));
+      margin-inline: auto;
+    }
+
+    .policy + .policy {
+      margin-top: 80px;
+      padding-top: 72px;
+      border-top: 1px solid var(--border);
+    }
+
+    .policy-header {
+      margin-bottom: 42px;
+    }
+
+    .policy-header h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 5vw, 2.7rem);
+      letter-spacing: -0.035em;
+    }
+
+    .policy-header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .policy section {
+      scroll-margin-top: 24px;
+    }
+
+    .policy section + section {
+      margin-top: 48px;
+    }
+
+    .policy h3 {
+      margin: 0 0 15px;
+      font-size: 1.38rem;
+      letter-spacing: -0.018em;
+    }
+
+    .policy p {
+      margin: 0 0 16px;
+    }
+
+    .policy ul {
+      margin: 12px 0 18px;
+      padding-inline-start: 1.35rem;
+    }
+
+    .policy li + li {
+      margin-top: 10px;
+    }
+
+    .callout {
+      margin: 24px 0;
+      padding: 20px 22px;
+      border-inline-start: 4px solid var(--brand);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      background: var(--surface-soft);
+    }
+
+    [dir="rtl"] .callout {
+      border-radius: var(--radius-md) 0 0 var(--radius-md);
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    .data-list {
+      display: grid;
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .data-item {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .data-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .data-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      padding: 28px 20px 48px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding-inline: 16px;
+      }
+
+      .brand span:last-child {
+        display: none;
+      }
+
+      main {
+        padding-top: 14px;
+      }
+
+      .hero {
+        margin-top: 18px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .skip-link {
+        transition: none;
+      }
+    }
+
+    @media print {
+      :root {
+        --page: #ffffff;
+        --surface: #ffffff;
+        --surface-soft: #f4f7f4;
+        --text: #111111;
+        --muted: #404040;
+        --brand: #006c35;
+        --brand-strong: #00522a;
+        --border: #cccccc;
+      }
+
+      body {
+        background: #ffffff;
+        font-size: 11pt;
+      }
+
+      .language-nav,
+      .skip-link {
+        display: none;
+      }
+
+      .summary-card,
+      .contact-card {
+        box-shadow: none;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the privacy policy</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="#top" aria-label="Ratiby privacy policy home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+        </span>
+        <span>Ratiby · راتبي</span>
+      </a>
+
+      <nav class="language-nav" aria-label="Policy languages">
+        <a href="#english" lang="en">English</a>
+        <a href="#arabic" lang="ar" dir="rtl">العربية</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="hero" id="top">
+      <p class="eyebrow">Privacy, in plain language</p>
+      <h1>Your finances belong to you.</h1>
+      <p class="hero-copy">Ratiby is built to keep your salary, expenses, budgets, and notes on your device—not on our servers.</p>
+      <p class="updated">Effective and last updated: 19 September 2026</p>
+    </div>
+
+    <section class="summary-grid" aria-label="Privacy summary">
+      <div class="summary-card">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="2" width="14" height="20" rx="3"></rect>
+          <path d="M9 18h6"></path>
+        </svg>
+        <h2>Local-first</h2>
+        <p>Your financial records are stored and processed on your device.</p>
+      </div>
+      <div class="summary-card">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 3l18 18"></path>
+          <path d="M10.6 10.7a2 2 0 0 0 2.7 2.7"></path>
+          <path d="M9.9 4.2A10.5 10.5 0 0 1 12 4c5 0 9 5.5 9 8a7.7 7.7 0 0 1-1.6 2.9"></path>
+          <path d="M6.6 6.6C4.4 8.1 3 10.6 3 12c0 2.5 4 8 9 8 1.1 0 2.2-.3 3.1-.7"></path>
+        </svg>
+        <h2>No ads or analytics</h2>
+        <p>We do not sell your data or use advertising, behavioral analytics, or tracking SDKs.</p>
+      </div>
+      <div class="summary-card">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 7h10v10H7z"></path>
+          <path d="M3 12h4m10 0h4M12 3v4m0 10v4"></path>
+        </svg>
+        <h2>Limited subscription data</h2>
+        <p>RevenueCat receives only the technical and purchase data needed to manage subscriptions—not your financial records.</p>
+      </div>
+    </section>
+
+    <article class="policy" id="english" lang="en">
+      <header class="policy-header">
+        <h2>Privacy Policy</h2>
+        <p>This English version is followed by a complete Arabic version.</p>
+      </header>
+
+      <section aria-labelledby="en-scope">
+        <h3 id="en-scope">1. Scope and who we are</h3>
+        <p>This Privacy Policy explains how the developer of Ratiby ("Ratiby," "we," "us," or "our") handles information when you use the Ratiby mobile application. Ratiby is a salary-planning tool; it is not a bank, payment service, financial adviser, or credit provider.</p>
+        <p>Ratiby does not require an account. We do not ask for your name, email address, phone number, bank login, or government identifier to use the app.</p>
+      </section>
+
+      <section aria-labelledby="en-data">
+        <h3 id="en-data">2. Information processed</h3>
+        <div class="data-list">
+          <div class="data-item">
+            <strong>Financial records you enter</strong>
+            <p>Salary and other income, expenses, amounts, dates, categories, optional notes, budgets, recurring expenses, payday settings, and related calculations. These records are stored and processed locally on your device and are not sent to Ratiby or RevenueCat.</p>
+          </div>
+          <div class="data-item">
+            <strong>App preferences and security settings</strong>
+            <p>Language, date and numeral preferences, onboarding status, notification choices, and app-lock settings are stored locally. If you create an app PIN, Ratiby stores a salted cryptographic hash and salt in secure system storage—not the PIN itself. Biometric authentication is performed by your device; Ratiby receives only a success or failure result and never receives your fingerprint or face data.</p>
+          </div>
+          <div class="data-item">
+            <strong>Subscription and purchase information</strong>
+            <p>Ratiby uses RevenueCat to show subscription offers, verify purchases, restore purchases, and determine access to paid features. The SDK creates a random anonymous app-user identifier because Ratiby has no account system. RevenueCat may process that identifier, device type, operating system, app or SDK information, preferred paywall language, last-seen time, network information such as an IP address, and purchase information such as product, status, dates, Apple receipt, or Google purchase token. Ratiby does not send your salary, expenses, budgets, categories, or notes to RevenueCat.</p>
+          </div>
+          <div class="data-item">
+            <strong>Information you choose to send us</strong>
+            <p>If you contact us for support or a privacy request, we process the contact details and message you provide only to respond, keep necessary support records, and comply with legal obligations.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p><strong>What Ratiby does not collect:</strong> Ratiby does not access your bank account, SMS inbox, contacts, location, photos, camera, microphone, or advertising identifier. It contains no advertising, behavioral analytics, or third-party crash-reporting SDK.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="en-features">
+        <h3 id="en-features">3. Optional device features</h3>
+        <ul>
+          <li><strong>Notifications:</strong> If you enable reminders, Ratiby requests notification permission and schedules notifications locally on your device. A notification may display financial information such as an amount or recurring-expense name. You can disable notifications in Ratiby or your device settings.</li>
+          <li><strong>Biometrics:</strong> If you enable Face ID, Touch ID, or Android biometrics, authentication is handled by the operating system. Ratiby does not receive or store biometric templates.</li>
+          <li><strong>Exports and sharing:</strong> CSV and PDF exports are generated on your device. Ratiby creates a temporary file for the system share sheet and deletes its temporary copy after the sharing flow. Once you save or share an export, the copy is controlled by you and by the destination service you selected.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="en-use">
+        <h3 id="en-use">4. Why we process information</h3>
+        <p>We process information only to provide the app's requested functions, calculate your plan on-device, remember your settings, protect the app with an optional PIN or biometrics, schedule optional reminders, create exports at your request, manage subscriptions and paid access, respond to support and privacy requests, prevent fraud or misuse, and meet legal obligations.</p>
+        <p>Where a legal basis is required, processing is based on performing our agreement with you and providing the service you request; your consent for optional permissions and features; our legitimate interests in securing and operating subscriptions, where permitted; and compliance with legal obligations. You may withdraw consent for optional features at any time by disabling them.</p>
+      </section>
+
+      <section aria-labelledby="en-sharing">
+        <h3 id="en-sharing">5. When information leaves your device</h3>
+        <p>We do not sell or rent personal data. We do not share your on-device financial records with advertisers, data brokers, or subscription providers.</p>
+        <ul>
+          <li><strong>RevenueCat:</strong> RevenueCat, Inc. processes the limited technical and transaction information described above on our behalf to provide subscription infrastructure. RevenueCat states that end-user data is hosted using Amazon Web Services in the United States. Review the <a href="https://www.revenuecat.com/privacy/" rel="noopener noreferrer">RevenueCat Privacy Policy</a>.</li>
+          <li><strong>Apple or Google:</strong> If you make a purchase, Apple App Store or Google Play processes the payment and may provide purchase receipts or tokens for verification. We do not receive your full payment-card details. Their own privacy policies apply to their processing.</li>
+          <li><strong>Your chosen destination:</strong> When you share an export, the operating system sends it to the person, app, or service you select. That recipient's privacy practices then apply.</li>
+          <li><strong>Legal or organizational events:</strong> We may disclose limited information if required by valid law or legal process, to protect rights and safety, or as part of a merger, acquisition, financing, or sale, with appropriate safeguards and notice where required.</li>
+        </ul>
+        <p>We require service providers acting for us to protect information consistently with this Policy, our instructions, contractual safeguards, and applicable law.</p>
+      </section>
+
+      <section aria-labelledby="en-retention">
+        <h3 id="en-retention">6. Storage, international transfers, and retention</h3>
+        <ul>
+          <li><strong>On-device data:</strong> Your financial records remain on your device until you edit or delete them, clear the app's data through your operating system, or uninstall Ratiby. Device backups managed by Apple or Google may retain a copy according to your backup settings and the platform provider's policy.</li>
+          <li><strong>Temporary exports:</strong> Ratiby's temporary export copy is deleted after the system sharing flow. Copies you save or send remain wherever you placed them.</li>
+          <li><strong>Subscription data:</strong> RevenueCat may process subscription information in the United States and through its subprocessors. We retain it only for as long as reasonably necessary to provide and document subscriptions, resolve disputes, prevent fraud, and meet legal obligations. RevenueCat may retain information under its own legal and contractual requirements.</li>
+          <li><strong>Support messages:</strong> We keep support and privacy correspondence only as long as needed to answer you, maintain necessary records, and comply with law.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="en-security">
+        <h3 id="en-security">7. Security</h3>
+        <p>Ratiby minimizes network data by keeping financial records on-device. It uses operating-system storage protections, secure system storage for the PIN hash and salt, and iOS Complete File Protection for its local database. Subscription communications use encrypted network connections. You may also enable Ratiby's PIN and biometric lock.</p>
+        <p>No storage or transmission method is completely secure. Protect your device passcode and carefully choose where you send unencrypted CSV or PDF exports.</p>
+      </section>
+
+      <section aria-labelledby="en-rights">
+        <h3 id="en-rights">8. Your choices and privacy rights</h3>
+        <p>You can view, correct, or delete the financial records stored in Ratiby using the app's controls, and export eligible expense data. You can disable notifications and biometrics at any time. Uninstalling Ratiby removes its local app data from the device, subject to copies in device backups and exports you created.</p>
+        <p>Depending on the law where you live—including the Saudi Personal Data Protection Law—you may have rights to be informed, access or obtain a copy of personal data, correct or update it, request destruction, and withdraw consent. You may also have the right to complain to the relevant data-protection authority. These rights can be subject to legal exceptions.</p>
+        <p>To exercise a right relating to subscription or support data, contact us below. Because Ratiby does not use accounts and RevenueCat identifies installations anonymously, we may need additional information to locate a subscription record and may be unable to connect an anonymous record to you without it. We may verify your request before acting.</p>
+      </section>
+
+      <section aria-labelledby="en-children">
+        <h3 id="en-children">9. Children</h3>
+        <p>Ratiby is a personal salary-planning app intended for adults and is not directed to children. We do not knowingly collect personal data from children. If you believe a child has sent personal data to us, contact us so we can review and delete it where required.</p>
+      </section>
+
+      <section aria-labelledby="en-changes">
+        <h3 id="en-changes">10. Changes to this Policy</h3>
+        <p>We may update this Policy if Ratiby's features, service providers, or legal obligations change. We will update the date above and provide any additional notice required by law. Material changes apply prospectively from their effective date.</p>
+      </section>
+
+      <section aria-labelledby="en-contact">
+        <h3 id="en-contact">11. Contact us</h3>
+        <div class="contact-card">
+          <p><strong>Data controller:</strong> </p>
+          <p><strong>Privacy email:</strong> <a href="mailto:eddahbirs@gmail.com"></a></p>
+          <p>Use the subject line “Ratiby Privacy Request.” Please do not include financial records, your PIN, payment-card details, or other sensitive information in your first message.</p>
+        </div>
+      </section>
+    </article>
+
+    <article class="policy" id="arabic" lang="ar" dir="rtl">
+      <header class="policy-header">
+        <h2>سياسة الخصوصية</h2>
+        <p>توضح هذه النسخة العربية الكاملة كيفية تعامل تطبيق راتبي مع المعلومات.</p>
+      </header>
+
+      <section aria-labelledby="ar-scope">
+        <h3 id="ar-scope">١. نطاق السياسة ومن نحن</h3>
+        <p>توضح سياسة الخصوصية هذه كيفية تعامل مطوّر تطبيق راتبي (ويشار إليه بـ «راتبي» أو «نحن» أو «لنا») مع المعلومات عند استخدامك لتطبيق راتبي للجوال. راتبي أداة لتخطيط الراتب، وليس بنكًا أو خدمة دفع أو مستشارًا ماليًا أو جهة ائتمانية.</p>
+        <p>لا يتطلب راتبي إنشاء حساب، ولا نطلب اسمك أو بريدك الإلكتروني أو رقم هاتفك أو بيانات الدخول إلى حسابك البنكي أو رقم هويتك الحكومية لاستخدام التطبيق.</p>
+      </section>
+
+      <section aria-labelledby="ar-data">
+        <h3 id="ar-data">٢. المعلومات التي تتم معالجتها</h3>
+        <div class="data-list">
+          <div class="data-item">
+            <strong>السجلات المالية التي تدخلها</strong>
+            <p>الراتب والدخل الآخر والمصروفات والمبالغ والتواريخ والتصنيفات والملاحظات الاختيارية والميزانيات والمصروفات المتكررة وإعدادات يوم الراتب والحسابات المرتبطة بها. تُخزّن هذه السجلات وتُعالج محليًا على جهازك، ولا تُرسل إلى راتبي أو RevenueCat.</p>
+          </div>
+          <div class="data-item">
+            <strong>تفضيلات التطبيق وإعدادات الأمان</strong>
+            <p>تُخزّن اللغة وتفضيلات التاريخ والأرقام وحالة إكمال خطوات البدء وخيارات الإشعارات وإعدادات قفل التطبيق محليًا. إذا أنشأت رمز PIN للتطبيق، يخزّن راتبي بصمة تشفيرية مملّحة والملح داخل مخزن النظام الآمن، ولا يخزّن رمز PIN نفسه. ينفذ جهازك المصادقة الحيوية، ولا يتلقى راتبي سوى نتيجة نجاح أو فشل، ولا يتلقى بصمة إصبعك أو بيانات وجهك.</p>
+          </div>
+          <div class="data-item">
+            <strong>معلومات الاشتراك والشراء</strong>
+            <p>يستخدم راتبي خدمة RevenueCat لعرض خيارات الاشتراك والتحقق من عمليات الشراء واستعادتها وتحديد الوصول إلى المزايا المدفوعة. تنشئ حزمة الخدمة معرّف مستخدم عشوائيًا ومجهولًا لأن راتبي لا يملك نظام حسابات. قد تعالج RevenueCat هذا المعرّف ونوع الجهاز ونظام التشغيل ومعلومات التطبيق أو حزمة الخدمة ولغة شاشة الاشتراك ووقت آخر استخدام ومعلومات الشبكة مثل عنوان IP ومعلومات الشراء مثل المنتج والحالة والتواريخ وإيصال Apple أو رمز شراء Google. لا يرسل راتبي راتبك أو مصروفاتك أو ميزانياتك أو تصنيفاتك أو ملاحظاتك إلى RevenueCat.</p>
+          </div>
+          <div class="data-item">
+            <strong>المعلومات التي تختار إرسالها إلينا</strong>
+            <p>إذا تواصلت معنا لطلب الدعم أو لممارسة حق متعلق بالخصوصية، فإننا نعالج بيانات التواصل والرسالة التي تقدمها فقط للرد عليك والاحتفاظ بسجلات الدعم الضرورية والامتثال للالتزامات النظامية.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p><strong>ما لا يجمعه راتبي:</strong> لا يصل راتبي إلى حسابك البنكي أو صندوق رسائلك النصية أو جهات اتصالك أو موقعك أو صورك أو الكاميرا أو الميكروفون أو معرّف الإعلانات. ولا يتضمن إعلانات أو تحليلات سلوكية أو حزمة خارجية للإبلاغ عن الأعطال.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="ar-features">
+        <h3 id="ar-features">٣. ميزات الجهاز الاختيارية</h3>
+        <ul>
+          <li><strong>الإشعارات:</strong> إذا فعّلت التذكيرات، يطلب راتبي إذن الإشعارات ويجدولها محليًا على جهازك. قد يعرض الإشعار معلومات مالية مثل مبلغ أو اسم مصروف متكرر. يمكنك إيقاف الإشعارات من راتبي أو إعدادات جهازك.</li>
+          <li><strong>المصادقة الحيوية:</strong> إذا فعّلت Face ID أو Touch ID أو المصادقة الحيوية في Android، يتولى نظام التشغيل المصادقة. لا يتلقى راتبي قوالب بياناتك الحيوية ولا يخزنها.</li>
+          <li><strong>التصدير والمشاركة:</strong> تُنشأ ملفات CSV وPDF على جهازك. ينشئ راتبي ملفًا مؤقتًا لنافذة المشاركة في النظام ويحذف نسخته المؤقتة بعد انتهاء مسار المشاركة. بعد حفظك ملفًا مصدّرًا أو مشاركته، تصبح النسخة تحت سيطرتك وسيطرة الخدمة التي اخترتها.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="ar-use">
+        <h3 id="ar-use">٤. أسباب معالجة المعلومات</h3>
+        <p>نعالج المعلومات فقط لتقديم الوظائف التي طلبتها في التطبيق، وإجراء حسابات خطتك على الجهاز، وتذكر إعداداتك، وحماية التطبيق برمز PIN أو المصادقة الحيوية اختياريًا، وجدولة التذكيرات الاختيارية، وإنشاء الملفات المصدّرة بناءً على طلبك، وإدارة الاشتراكات والوصول المدفوع، والرد على طلبات الدعم والخصوصية، ومنع الاحتيال أو إساءة الاستخدام، والوفاء بالالتزامات النظامية.</p>
+        <p>عندما يلزم وجود مسوغ نظامي، تستند المعالجة إلى تنفيذ اتفاقنا معك وتقديم الخدمة التي تطلبها، أو موافقتك على الأذونات والميزات الاختيارية، أو مصالحنا المشروعة في تأمين الاشتراكات وتشغيلها حيث يسمح النظام، أو الامتثال للالتزامات النظامية. يمكنك سحب موافقتك على الميزات الاختيارية في أي وقت بإيقافها.</p>
+      </section>
+
+      <section aria-labelledby="ar-sharing">
+        <h3 id="ar-sharing">٥. متى تغادر المعلومات جهازك</h3>
+        <p>لا نبيع البيانات الشخصية ولا نؤجرها، ولا نشارك سجلاتك المالية الموجودة على الجهاز مع المعلنين أو وسطاء البيانات أو مزودي خدمة الاشتراك.</p>
+        <ul>
+          <li><strong>RevenueCat:</strong> تعالج شركة RevenueCat, Inc. المعلومات التقنية ومعلومات المعاملات المحدودة الموضحة أعلاه نيابةً عنا لتوفير بنية الاشتراكات. تفيد RevenueCat بأنها تستضيف بيانات المستخدمين النهائيين عبر Amazon Web Services في الولايات المتحدة. راجع <a href="https://www.revenuecat.com/privacy/" rel="noopener noreferrer">سياسة خصوصية RevenueCat</a>.</li>
+          <li><strong>Apple أو Google:</strong> إذا أجريت عملية شراء، تعالج Apple App Store أو Google Play عملية الدفع وقد توفر إيصالات أو رموز شراء للتحقق. لا نتلقى بيانات بطاقتك الكاملة. تنطبق سياسات الخصوصية الخاصة بهما على معالجتهما.</li>
+          <li><strong>الوجهة التي تختارها:</strong> عند مشاركة ملف مصدّر، يرسله نظام التشغيل إلى الشخص أو التطبيق أو الخدمة التي تختارها، ثم تسري ممارسات الخصوصية الخاصة بذلك المستلم.</li>
+          <li><strong>المتطلبات النظامية أو التغييرات المؤسسية:</strong> قد نفصح عن معلومات محدودة إذا تطلب ذلك نظام نافذ أو إجراء قانوني صحيح، أو لحماية الحقوق والسلامة، أو في إطار اندماج أو استحواذ أو تمويل أو بيع، مع تطبيق الضمانات والإشعارات المناسبة متى كان ذلك مطلوبًا.</li>
+        </ul>
+        <p>نُلزم مزودي الخدمات الذين يعملون نيابةً عنا بحماية المعلومات بما يتفق مع هذه السياسة وتعليماتنا والضمانات التعاقدية والأنظمة السارية.</p>
+      </section>
+
+      <section aria-labelledby="ar-retention">
+        <h3 id="ar-retention">٦. التخزين والنقل الدولي والاحتفاظ</h3>
+        <ul>
+          <li><strong>البيانات الموجودة على الجهاز:</strong> تبقى سجلاتك المالية على جهازك حتى تعدّلها أو تحذفها، أو تمسح بيانات التطبيق من خلال نظام التشغيل، أو تحذف راتبي. قد تحتفظ النسخ الاحتياطية للجهاز التي تديرها Apple أو Google بنسخة وفقًا لإعدادات النسخ الاحتياطي وسياسة مزود المنصة.</li>
+          <li><strong>الملفات المؤقتة:</strong> تُحذف نسخة راتبي المؤقتة من الملف المصدّر بعد مسار المشاركة في النظام. أما النسخ التي تحفظها أو ترسلها فتبقى في المكان الذي وضعتها فيه.</li>
+          <li><strong>بيانات الاشتراك:</strong> قد تعالج RevenueCat معلومات الاشتراك في الولايات المتحدة ومن خلال معالجيها الفرعيين. نحتفظ بها فقط للمدة اللازمة بصورة معقولة لتقديم الاشتراكات وتوثيقها وحل النزاعات ومنع الاحتيال والوفاء بالالتزامات النظامية. وقد تحتفظ RevenueCat بالمعلومات وفق متطلباتها النظامية والتعاقدية.</li>
+          <li><strong>رسائل الدعم:</strong> نحتفظ بمراسلات الدعم والخصوصية فقط للمدة اللازمة للرد عليك والاحتفاظ بالسجلات الضرورية والامتثال للأنظمة.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="ar-security">
+        <h3 id="ar-security">٧. الأمان</h3>
+        <p>يقلل راتبي بيانات الشبكة بإبقاء السجلات المالية على الجهاز. ويستخدم وسائل حماية التخزين في نظام التشغيل ومخزن النظام الآمن لبصمة رمز PIN والملح، كما يستخدم الحماية الكاملة للملفات في iOS لقاعدة البيانات المحلية. وتستخدم اتصالات الاشتراك قنوات شبكة مشفرة. ويمكنك أيضًا تفعيل قفل راتبي برمز PIN والمصادقة الحيوية.</p>
+        <p>لا توجد وسيلة تخزين أو نقل آمنة بصورة كاملة. احمِ رمز دخول جهازك واختر بعناية أين ترسل ملفات CSV أو PDF غير المشفرة.</p>
+      </section>
+
+      <section aria-labelledby="ar-rights">
+        <h3 id="ar-rights">٨. خياراتك وحقوقك المتعلقة بالخصوصية</h3>
+        <p>يمكنك عرض السجلات المالية المخزنة في راتبي أو تصحيحها أو حذفها باستخدام أدوات التطبيق، كما يمكنك تصدير بيانات المصروفات المؤهلة. ويمكنك إيقاف الإشعارات والمصادقة الحيوية في أي وقت. يؤدي حذف راتبي إلى إزالة بياناته المحلية من الجهاز، مع مراعاة النسخ الموجودة في النسخ الاحتياطية للجهاز والملفات التي صدّرتها.</p>
+        <p>قد تكون لك، بحسب النظام الساري في مكان إقامتك، بما في ذلك نظام حماية البيانات الشخصية السعودي، حقوق في العلم بالمعالجة والوصول إلى البيانات الشخصية أو الحصول على نسخة منها وتصحيحها أو تحديثها وطلب إتلافها وسحب الموافقة. وقد يحق لك أيضًا تقديم شكوى إلى جهة حماية البيانات المختصة. وقد تخضع هذه الحقوق لاستثناءات نظامية.</p>
+        <p>لممارسة حق يتعلق ببيانات الاشتراك أو الدعم، تواصل معنا أدناه. ولأن راتبي لا يستخدم حسابات وتعرّف RevenueCat عمليات التثبيت بمعرّف مجهول، فقد نحتاج إلى معلومات إضافية للعثور على سجل الاشتراك، وقد لا نستطيع ربط سجل مجهول بك من دونها. وقد نتحقق من طلبك قبل تنفيذه.</p>
+      </section>
+
+      <section aria-labelledby="ar-children">
+        <h3 id="ar-children">٩. الأطفال</h3>
+        <p>راتبي تطبيق شخصي لتخطيط الراتب مخصص للبالغين وليس موجّهًا للأطفال. لا نجمع عن علم بيانات شخصية من الأطفال. إذا كنت تعتقد أن طفلًا أرسل إلينا بيانات شخصية، فتواصل معنا لنراجعها ونحذفها متى كان ذلك مطلوبًا.</p>
+      </section>
+
+      <section aria-labelledby="ar-changes">
+        <h3 id="ar-changes">١٠. التغييرات على هذه السياسة</h3>
+        <p>قد نحدّث هذه السياسة إذا تغيرت ميزات راتبي أو مزودو خدماته أو التزاماتنا النظامية. سنحدّث التاريخ أعلاه ونقدم أي إشعار إضافي يطلبه النظام. تسري التغييرات الجوهرية من تاريخ نفاذها وعلى المستقبل.</p>
+      </section>
+
+      <section aria-labelledby="ar-contact">
+        <h3 id="ar-contact">١١. التواصل معنا</h3>
+        <div class="contact-card">
+          <p><strong>المتحكم بالبيانات:</strong> [أدخل الاسم النظامي للمطور أو الشركة]</p>
+          <p><strong>البريد الإلكتروني للخصوصية:</strong> <a href="mailto:eddahbirs@gmail.com"></a></p>
+          <p>استخدم عنوان الرسالة «طلب خصوصية راتبي». يُرجى عدم تضمين سجلات مالية أو رمز PIN أو بيانات بطاقة الدفع أو أي معلومات حساسة أخرى في رسالتك الأولى.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>Ratiby · راتبي — A local-first salary planning app.</p>
+  </footer>
+</body>
+</html>
